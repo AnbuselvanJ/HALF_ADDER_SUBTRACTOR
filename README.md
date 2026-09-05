@@ -49,13 +49,29 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+``` module basic_gates(
+    input A, B, Cin,
+    output SUM, CARRY, BO, DIFF
+);
+
+assign SUM = A ^ B ^ Cin;
+assign CARRY = (A & B) | (B & Cin) | (A & Cin);
+
+assign DIFF = A ^ B ^ Cin;
+assign BO = (~A & B) | (~A & Cin) | (B & Cin);
+
+endmodule
+```
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by:Anbuselvan J RegisterNumber:*/212225230015
+<img width="1676" height="939" alt="image" src="https://github.com/user-attachments/assets/80dd787b-1cea-4772-a346-275a38d96a7e" />
 
 **RTL Schematic**
+<img width="1614" height="975" alt="image" src="https://github.com/user-attachments/assets/c7887fdf-cc12-47e8-b714-ac8fff31d155" />
 
 **Output/TIMING Waveform**
+<img width="1677" height="938" alt="image" src="https://github.com/user-attachments/assets/4eda9c84-72d4-4417-a8f0-7f6af909aa92" />
 
 **Result:**
